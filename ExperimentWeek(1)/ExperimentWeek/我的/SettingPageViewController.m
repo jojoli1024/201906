@@ -17,6 +17,7 @@
 @interface SettingPageViewController ()<UITableViewDelegate, UITableViewDataSource>
 //@property (strong, nonatomic) IBOutlet UITabBarItem *settingsTabBar;
 @property (strong, nonatomic) NSArray *settings;
+//@property (strong, nonatomic) Sqlite3Manager *s;
 @end
 
 @implementation SettingPageViewController
@@ -30,7 +31,7 @@
     
     self.settings = @[@"个人信息录入",@"二维码扫描",@"我的通讯录"];
     // 创建UItableView，style选择Grouped或Plain，这里我们以Grouped为例
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-20) style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 190, self.view.frame.size.width, self.view.frame.size.height-20) style:UITableViewStyleGrouped];
     // 声明 tableView 的代理和数据源
     tableView.delegate = self;
     tableView.dataSource = self;
